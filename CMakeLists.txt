@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.5)
 
 project(clpe_ros_msgs)
 
+find_package(catkin REQUIRED COMPONENTS message_generation)
+
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
   set(CMAKE_CXX_STANDARD 14)
@@ -12,19 +14,12 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wpedantic")
 endif()
 
-find_package(ament_cmake REQUIRED)
-find_package(builtin_interfaces REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
-
-set(msg_files
-  msg/ClpeCameraInfo.msg
+add_message_files(
+  DIRECTORY msg
+  FILES
+    ClpeCameraInfo.msg
 )
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-  ${msg_files}
-  ADD_LINTER_TESTS
-)
+generate_messages()
 
-ament_export_dependencies(rosidl_default_runtime)
-
-ament_package()
+catkin_package()
