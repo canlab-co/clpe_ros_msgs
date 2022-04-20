@@ -4,9 +4,10 @@
   <name>clpe_ros_msgs</name>
   <version>0.1.0</version>
   <description>Messages used by clpe_ros</description>
-  <maintainer email="none@none.com">None</maintainer>
   <license>Apache License 2.0</license>
   <author>Teo Koon Peng</author>
+  <maintainer email="dwsun@can-lab.co.kr">Dongwoo Sun</maintainer>
+  <maintainer email="rlatae123@can-lab.co.kr">Taejung Kim</maintainer>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>rosidl_default_generators</buildtool_depend>
