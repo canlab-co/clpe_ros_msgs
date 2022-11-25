@@ -8,8 +8,6 @@
   <author>Teo Koon Peng</author>
   <maintainer email="dwsun@can-lab.co.kr">Dongwoo Sun</maintainer>
   <maintainer email="rlatae123@can-lab.co.kr">Taejung Kim</maintainer>
-
-  <build_depend>message_generation</build_depend>
   
   <buildtool_depend>catkin</buildtool_depend>
   <buildtool_depend condition="$ROS_PYTHON_VERSION == 2">python-setuptools</buildtool_depend>
